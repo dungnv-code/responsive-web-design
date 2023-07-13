@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;1,100;1,300;1,400;1,500&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'rotobo', sans-serif;
+    list-style: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary: rgb(1, 248, 9);
+}
+
+body {
+    background: #fff;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+header {
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--primary);
+    width: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 2rem;
+    padding: 1rem 2rem;
+    color: black;
+}
+
+
+header .logo {
+    color: black;
+    font-size: 3rem;
+    font-weight: 500;
+}
+
+header .navbar {
+    display: flex;
+    align-items: center;
+}
+
+header .navbar li {
+    margin: 0 2rem;
+    font-family: 400;
+}
+
+header .navbar li:hover {
+    background-color: var(--primary);
+}
+
+header .bars {
+    display: none;
+}
+
+header .fa-bars {
+    transition: .2s;
+}
+
+header .fa-times {
+    transform: rotate(180deg);
+}
+
+.home {
+    height: 100vh;
+}
+
+.home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.home img {
+    width: 50%;
+}
+
+.home .content {
+    margin: 0 2rem;
+}
+
+.home .content ul a {
+    font-size: 2rem;
+    background-color: #666;
+    color: #fff;
+    padding: 3px 4px;
+    margin: 2rem 1rem;
+}
+
+.home .content .title {
+    font-size: 2rem;
+    font-weight: 500;
+    margin: 1rem 0;
+}
+
+.home .content .title span {
+    color: var(--primary);
+}
+
+.home .content button {
+    background-color: var(--primary);
+    margin: 1rem 0;
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 3px;
+}
+
+@media (max-width:768px) {
+    header .bars {
+        display: block;
+    }
+
+    html {
+        font-size: 55.5%;
+    }
+
+    header .navbar {
+        width: 80%;
+        position: fixed;
+        display: flex;
+        flex-flow: column;
+        right: -100%;
+        top: 0;
+        background-color: #fff;
+        transition: .2s;
+    }
+
+    header .navbar li {
+        padding: 2rem 3rem;
+    }
+
+    header .nav-toggle {
+        right: -3%;
+    }
+}
+
+@media (max-width:541px) {
+    .home {
+        display: flex;
+        flex-flow: column;
+    }
+
+    .home .content{
+        text-align: center;
+    }
+}
